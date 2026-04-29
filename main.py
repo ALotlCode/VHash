@@ -19,7 +19,8 @@ cursor.execute('''
                music TEXT, 
                memes TEXT,
                live TEXT,
-               NSFW text)
+               NSFW TEXT,
+               community_posts TEXT)
 ''')
 
 
@@ -36,6 +37,7 @@ cursor.execute('''
                '#FWMCbeats', 
                '#FWMCwww',
                'None',
+               'None',
                'None')
 ''')
 
@@ -50,7 +52,38 @@ cursor.execute('''
                'None',
                '#lazulaff',
                '#lazulazulook',
-               '#lazukashii')
+               '#lazukashii',
+               'None')
+''')
+
+cursor.execute('''
+               INSERT INTO vtubers VALUES 
+               ('PillowDear', 
+               '#PillowDear', 
+               '#PillowDraw', 
+               'None',
+               'None',
+               'None',
+               'None',
+               'None',
+               'None',
+               'None',
+               '#ThePiwwos')
+''')
+
+cursor.execute('''
+               INSERT INTO vtubers VALUES 
+               ('Mitzy', 
+               '#mitzypluv', 
+               '#drawtzy', 
+               'None',
+               'None',
+               'None',
+               'None',
+               'None',
+               'None',
+               'None',
+               'None')
 ''')
 
 conn.commit()
@@ -58,7 +91,7 @@ conn.commit()
 
 # temporary
 
-cursor.execute("SELECT * FROM vtubers WHERE name = 'Lazuli'")
+cursor.execute("SELECT * FROM vtubers WHERE name = 'Mitzy'")
 
 
 # print the entire hashtag record
@@ -75,4 +108,5 @@ print(f'''
     Memes Hashtag: {result[7]}\n
     Livestream Hashtag: {result[8]}\n
     NSFW Hashtag: {result[8]}\n
+    Community Posts: {result[9]}\n
 ''')
