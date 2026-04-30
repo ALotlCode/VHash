@@ -33,3 +33,4 @@ python3 main.py
 3. SQL tutorial: https://www.w3schools.com/sql/default.asp
 4. Markdown tutorial: https://www.markdownguide.org/
 5. Mitzy hashtags: https://x.com/mitzy_luvs_u
+6. Python tutorial: https://www.w3schools.com/python/default.asp

@@ -88,25 +88,30 @@ cursor.execute('''
 
 conn.commit()
 
+# ask for a VTuber name
 
-# temporary
-
-cursor.execute("SELECT * FROM vtubers WHERE name = 'Mitzy'")
+vtuberName = input("Enter a VTuber name: ")
 
 
-# print the entire hashtag record
+try:
+    cursor.execute(f"SELECT * FROM vtubers WHERE name = '{vtuberName}'")
 
-result = cursor.fetchone()
-print(f'''
-    Vtuber: {result[0]}\n
-    General Hashtag: {result[1]}\n
-    Fan Art Hashtag: {result[2]}\n
-    Suggestions Hashtag: {result[3]}\n
-    Morning show Hashtag: {result[4]}\n
-    Clips Hashtag: {result[5]}\n
-    Music Hashtag: {result[6]}\n
-    Memes Hashtag: {result[7]}\n
-    Livestream Hashtag: {result[8]}\n
-    NSFW Hashtag: {result[8]}\n
-    Community Posts: {result[9]}\n
-''')
+    # print the entire hashtag record
+    
+    result = cursor.fetchone()
+    
+    print(f'''
+          Vtuber: {result[0]}\n 
+          General Hashtag: {result[1]}\n 
+          Fan Art Hashtag: {result[2]}\n 
+          Suggestions Hashtag: {result[3]}\n 
+          Morning show Hashtag: {result[4]}\n 
+          Clips Hashtag: {result[5]}\n 
+          Music Hashtag: {result[6]}\n 
+          Memes Hashtag: {result[7]}\n 
+          Livestream Hashtag: {result[8]}\n 
+          NSFW Hashtag: {result[8]}\n 
+          Community Posts: {result[9]}\n''') 
+
+except:
+    print("That VTuber is not in our records")
