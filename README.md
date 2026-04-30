@@ -17,7 +17,7 @@ A lookup service for VTuber hashtags
 ### Planned schedule
 1. Initial project (v0.1 alpha) [DONE]
 2. Add user input, add more VTubers (v0.2 alpha)
-3. Website, core functionality (v0.4 beta)
+3. Website, core functionality (v0.3 beta)
 4. Website, full release (v1.0)
 
 ## How to Install
